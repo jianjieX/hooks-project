@@ -1,12 +1,17 @@
 import Home from '../pages/home';
-import storeView from '../pages/storeView'
+import StoreView from '../pages/storeView';
+import ClassView from '../pages/classView';
 export const mainRoutes=[
     {
         pathname:'/',
-        component:storeView
+        component:StoreView
     },
     {
         pathname:'/home',
         component:Home
+    },
+    {
+        pathname:'/class',
+        component:ClassView
     }
 ];

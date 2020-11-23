@@ -1,0 +1,29 @@
+import React, { Component } from 'react';
+class classView extends Component{
+    constructor() {
+        super();
+        this.state = {
+            val: 0
+        };
+    }
+    componentDidMount() {
+        this.setState({val: this.state.val + 1});
+        console.log(this.state.val);    // 第 1 次 log   0
+
+        this.setState({val: this.state.val + 1});
+        console.log(this.state.val);    // 第 2 次 log   0
+
+        setTimeout(() => {
+            this.setState({val: this.state.val + 1});
+            console.log(this.state.val);  // 第 3 次 log 2
+
+            this.setState({val: this.state.val + 1});
+            console.log(this.state.val);  // 第 4 次 log 3
+        }, 0);
+    }
+
+    render() {
+        return null;
+    }
+};
+export default classView;
